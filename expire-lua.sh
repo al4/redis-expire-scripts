@@ -10,8 +10,6 @@ fi
 cursor=-1
 keys=""
 
-:>./expire.redis
-
 while [[ $cursor -ne 0 ]]; do
   if [[ $cursor -eq -1 ]]
   then
