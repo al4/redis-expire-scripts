@@ -20,7 +20,7 @@ while [[ $cursor -ne 0 ]]; do
   cursor=$(expr "$reply" : '\([0-9]*[0-9 ]\)')
   echo "Cursor: $cursor"
 
-  keys=$(echo $reply | awk '{for (i=2; i<NF; i++) print $i}')
+  keys=$(echo $reply | awk '{for (i=2; i<=NF; i++) print $i}')
   [ -z "$keys" ] && continue
 
   keya=( $keys )
